@@ -49,4 +49,18 @@ class Schedule():
         else:
             print("can't sort by "+str(field)+" yet")
             return self
- 
+    
+    #6a. title(self,phrase) -- filters courses containing the phrase in their title 
+    #Completed by James Kong on 2/13/2022
+    def title(self,phrase):
+        return Schedule([c for c in self.courses if phrase in c['name']])
+
+    #6b. description(self,phrase) - filters courses containing the phrase in the description 
+    #Completed by James Kong on 2/13/2022
+    def description(self,phrase):
+        return Schedule([c for c in self.courses if phrase in c['description']])
+    
+    #6c. Create your own filter method (e.g. by class day or time?)
+    #Completed by James Kong on 2/13/2022
+    def courseNum(self,num):
+        return Schedule([c for c in self.courses if num == c['coursenum']])

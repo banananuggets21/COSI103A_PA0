@@ -47,6 +47,16 @@ def topmenu():
         elif command in ['s','subject']:
             subject = input("enter a subject:")
             schedule = schedule.subject([subject])
+        #7a. course  -- filter by subject/coursenumber
+        #Completed by James Kong on 2/13/2022
+        elif command in ['c', 'course']:
+            courseNum = input("enter a course number:")
+            schedule = schedule.courseNum(courseNum)
+        #7c. title -- filter by phrase in the title
+        #Completed by James Kong on 2/13/2022
+        elif command in ['t', 'title']:
+            title = input("enter a course title:")
+            schedule = schedule.title(title)
         else:
             print('command',command,'is not supported')
             continue
