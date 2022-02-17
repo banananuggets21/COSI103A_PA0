@@ -52,11 +52,26 @@ def topmenu():
         elif command in ['c', 'course']:
             courseNum = input("enter a course number:")
             schedule = schedule.courseNum(courseNum)
+        #7b. instructor -- filter by instructor email or lastname
+        #Completed by Jeremy Bernstein on 2/16/2022
+        elif command in ['i', 'instructor']:
+            instructor = input("enter a instructor email/lastname:")
+            schedule = schedule.courseNum(instructor) 
         #7c. title -- filter by phrase in the title
         #Completed by James Kong on 2/13/2022
         elif command in ['t', 'title']:
             title = input("enter a course title:")
             schedule = schedule.title(title)
+        #7d. description -- filter by phrase in the discription
+        #Completed by Jeremy Bernstein on 2/17/2022
+        elif command in ['d', 'description']:
+            description = input("enter a course description:")
+            schedule = schedule.title(description)
+        #7e. Create your own filter (each team member creates their own)
+        #Completed by Jeremy Bernstein on 2/16/2022
+        elif command in ['c', 'code']:
+            code = input("enter a course code:")
+            schedule = schedule.courseNum(code)
         else:
             print('command',command,'is not supported')
             continue
