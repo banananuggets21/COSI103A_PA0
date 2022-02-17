@@ -64,3 +64,8 @@ class Schedule():
     #Completed by James Kong on 2/13/2022
     def courseNum(self,num):
         return Schedule([c for c in self.courses if num == c['coursenum']])
+
+    ##6c. Create your own filter method (e.g. by class day or time?)
+    #Completed by Hiro Chen on 2/17/2022
+    def startTime(self,time):
+        return Schedule([c for c in self.courses if time == c['start']])

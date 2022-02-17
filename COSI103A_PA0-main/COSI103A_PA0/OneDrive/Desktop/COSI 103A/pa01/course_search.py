@@ -67,9 +67,18 @@ def topmenu():
         elif command in ['c', 'code']:
             code = input("enter a course code:")
             schedule = schedule.courseNum(code)
+        #7e. Create your own filter (each team member creates their own)
+        #Completed by Hiro Chen on 2/17/2022
+        elif command in ['t', 'time']:
+            time = input("enter a course time")
+            schedule = schedule.courseNum(time)
+
         else:
             print('command',command,'is not supported')
             continue
+
+        
+
 
         print("courses has",len(schedule.courses),'elements',end="\n\n")
         print('here are the first 10')
