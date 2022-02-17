@@ -20,6 +20,8 @@ subject (filter by subject, e.g. COSI, or LALS)
 title  (filter by phrase in title)
 description (filter by phrase in description)
 timeofday (filter by day and time, e.g. meets at 11 on Wed)
+code (filter by a course number/code)
+section (filter by a section number)
 '''
 
 terms = {c['term'] for c in schedule.courses}
@@ -62,7 +64,7 @@ def topmenu():
         elif command in ['t', 'title']:
             title = input("enter a course title:")
             schedule = schedule.title(title)
-        #7d. description -- filter by phrase in the discription
+        #7d. description -- filter by phrase in the description
         #Completed by Jeremy Bernstein on 2/17/2022
         elif command in ['d', 'description']:
             description = input("enter a course description:")
@@ -72,6 +74,11 @@ def topmenu():
         elif command in ['c', 'code']:
             code = input("enter a course code:")
             schedule = schedule.courseNum(code)
+        #7e. Create your own filter (each team member creates their own)
+        #Completed by James Kong 2/17/2022
+        elif command in ['sn', 'section']:
+            sectionNum = input("Enter a section number")
+            schedule = schedule.sectionNum(sectionNum)
         else:
             print('command',command,'is not supported')
             continue
