@@ -59,18 +59,22 @@ class Schedule():
     #Completed by James Kong on 2/13/2022
     def description(self,phrase):
         return Schedule([c for c in self.courses if phrase in c['description']])
+
     #6c. Create your own filter method (e.g. by class day or time?)
     #Completed by James Kong on 2/13/2022
     def courseNum(self,num):
         return Schedule([c for c in self.courses if num == c['coursenum']])
+
     #6c. Create your own filter method (e.g. by class day or time?)
     #Completed by Jeremy Bernstein on 2/17/2022
     def courseTimes(self,times):
         return Schedule([c for c in self.courses if times == c['coursetimes']])
+
     #Extra method used for 7e
     #Completed by James Kong on 2/17/2022
     def sectionNum(self, num):
         return Schedule([c for c in self.courses if num == c['section']])
+        
     #6c. Create your own filter method (e.g. by class day or time?)
     #Completed by Hiro Chen on 2/17/2022
     def startTime(self,time):
