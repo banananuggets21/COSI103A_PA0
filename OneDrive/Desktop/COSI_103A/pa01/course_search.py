@@ -75,13 +75,24 @@ def topmenu():
             code = input("enter a course code:")
             schedule = schedule.courseNum(code)
         #7e. Create your own filter (each team member creates their own)
+<<<<<<< HEAD:COSI103A_PA0-main/COSI103A_PA0/OneDrive/Desktop/COSI 103A/pa01/course_search.py
+        #Completed by Hiro Chen on 2/17/2022
+        elif command in ['t', 'time']:
+            time = input("enter a course time")
+            schedule = schedule.courseNum(time)
+
+=======
         #Completed by James Kong 2/17/2022
         elif command in ['sn', 'section']:
             sectionNum = input("Enter a section number")
             schedule = schedule.sectionNum(sectionNum)
+>>>>>>> 1b7947c7eafc92d0ba3cc116a050a0823f2bc3b6:OneDrive/Desktop/COSI_103A/pa01/course_search.py
         else:
             print('command',command,'is not supported')
             continue
+
+        
+
 
         print("courses has",len(schedule.courses),'elements',end="\n\n")
         print('here are the first 10')
