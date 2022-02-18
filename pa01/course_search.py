@@ -68,9 +68,9 @@ def topmenu():
             SCHEDULE = SCHEDULE.title(description)
         #7e. Create your own filter (each team member creates their own)
         #Completed by Jeremy Bernstein on 2/16/2022
-        elif command in ['c', 'code']:
-            code = input("enter a course code:")
-            SCHEDULE = SCHEDULE.course_num(code)
+        elif command in ['s', 'status']:
+            status = input("enter a course status:")
+            SCHEDULE = SCHEDULE.course_num(status)
         #7e. Create your own filter (each team member creates their own)
         #Completed by James Kong 2/17/2022
         elif command in ['sn', 'section']:
