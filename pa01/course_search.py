@@ -2,7 +2,6 @@
 course_search is a Python script using a terminal based menu to help
 students search for courses they might want to take at Brandeis
 '''
-import sys
 from schedule import Schedule
 
 SCHEDULE = Schedule()
@@ -21,7 +20,7 @@ description (filter by phrase in description)
 timeofday (filter by day and time, e.g. meets at 11 on Wed)
 code (filter by a course number/code)
 section (filter by a section number)
-time (filter by time)
+status (filter by status)
 '''
 
 TERMS = {c['term'] for c in SCHEDULE.courses}
@@ -79,9 +78,9 @@ def topmenu():
             SCHEDULE = SCHEDULE.section_num(section_num)
         #7e. Create your own filter (each team member creates their own)
         #Completed by Hiro Chen on 2/17/2022
-        elif command in ['t', 'time']:
-            time = input("enter a course time")
-            SCHEDULE = SCHEDULE.course_times(time)
+        elif command in ['st', 'status_text']:
+            status = input("enter a course status")
+            schedule = schedule.statusText(status)
         else:
             print('command', command, 'is not supported')
             continue
