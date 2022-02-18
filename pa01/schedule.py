@@ -77,5 +77,5 @@ class Schedule():
         
     #6c. Create your own filter method (e.g. by class day or time?)
     #Completed by Hiro Chen on 2/17/2022
-    def startTime(self,time):
-        return Schedule([c for c in self.courses if time == c['start']])
+    def statusText(self,status):
+        return Schedule([c for c in self.courses if c['status_text'] in status])

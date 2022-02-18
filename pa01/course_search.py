@@ -22,7 +22,7 @@ description (filter by phrase in description)
 timeofday (filter by day and time, e.g. meets at 11 on Wed)
 code (filter by a course number/code)
 section (filter by a section number)
-time (filter by time)
+status (filter by status)
 '''
 
 terms = {c['term'] for c in schedule.courses}
@@ -82,9 +82,9 @@ def topmenu():
             schedule = schedule.sectionNum(sectionNum)
         #7e. Create your own filter (each team member creates their own)
         #Completed by Hiro Chen on 2/17/2022
-        elif command in ['t', 'time']:
-            time = input("enter a course time")
-            schedule = schedule.courseNum(time)
+        elif command in ['st', 'status_text']:
+            status = input("enter a course status")
+            schedule = schedule.statusText(status)
         else:
             print('command',command,'is not supported')
             continue
